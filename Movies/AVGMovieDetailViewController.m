@@ -9,6 +9,7 @@
 #import "AVGMovieDetailViewController.h"
 #import "AVGMovieInfoTableViewCell.h"
 #import "AVGMoviePlayerTableViewCell.h"
+#import "AVGMoviesDataController.h"
 
 typedef NS_ENUM(NSUInteger, AVGMovieDetailRowType) {
     AVGMovieDetailRowTypeInfo,
@@ -53,7 +54,7 @@ static NSString * const kPlayerCellReuseIdentifier = @"PlayerCell";
 }
 
 - (void)updateFavoriteButton {
-    UIImage *image = self.movie.isFavorite ? [UIImage imageNamed:@"like_tab_icon_filled"] : [UIImage imageNamed:@"like_tab_icon"];
+    UIImage *image = self.movie.favorite.boolValue ? [UIImage imageNamed:@"like_tab_icon_filled"] : [UIImage imageNamed:@"like_tab_icon"];
     UIBarButtonItem *favoriteButtonItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(favoriteButtonTapped:)];
     
     self.navigationItem.rightBarButtonItem = favoriteButtonItem;
@@ -62,9 +63,9 @@ static NSString * const kPlayerCellReuseIdentifier = @"PlayerCell";
 #pragma makr - Helper Methods
 
 - (void)favoriteButtonTapped:(id)sender {
-    self.movie.favorite = !self.movie.isFavorite;
+    self.movie.favorite = @(!self.movie.favorite.boolValue);
     //TODO: update core data
-    
+    [[AVGMoviesDataController sharedInstance].managedObjectContext save:nil];
     [self updateFavoriteButton];
     
     NSArray *indexPaths = [self.tableView indexPathsForVisibleRows];

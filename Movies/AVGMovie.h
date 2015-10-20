@@ -7,18 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+@import CoreData;
 
-@interface AVGMovie : NSObject
+@interface AVGMovie : NSManagedObject
 
-@property (nonatomic, assign) NSInteger trackId;
-@property (nonatomic, copy) NSString *artistName;
-@property (nonatomic, copy) NSString *trackName;
-@property (nonatomic, copy) NSString *longDescription;
-@property (nonatomic, copy) NSString *artworkUrl;
-@property (nonatomic, strong) NSDate *releaseDate;
-@property (nonatomic, copy) NSString *previewUrl;
-@property (nonatomic, assign, getter=isFavorite) BOOL favorite;
+@property (nonatomic, retain) NSNumber *trackId;
+@property (nonatomic, retain) NSString *artistName;
+@property (nonatomic, retain) NSString *trackName;
+@property (nonatomic, retain) NSString *longDescription;
+@property (nonatomic, retain) NSString *artworkUrl;
+@property (nonatomic, retain) NSDate *releaseDate;
+@property (nonatomic, retain) NSString *previewUrl;
+@property (nonatomic, retain) NSNumber *favorite;
 
++ (NSString *)entityName;
++ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)moc;
 
 /*"wrapperType": "track",
 "kind": "feature-movie",

@@ -13,7 +13,9 @@
 @implementation AVGItunesAPI
 
 + (void)getMoviesForSearchTerm:(NSString *)searchTerm completion:(void (^)(NSArray *movies, NSError *error))completion {
-    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=movie", searchTerm];
+    NSString *encodedString =[searchTerm stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=movie", encodedString];
     NSURL *url = [NSURL URLWithString:urlString];
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         id result;

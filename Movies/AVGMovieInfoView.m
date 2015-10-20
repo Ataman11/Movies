@@ -34,7 +34,7 @@
 }
 
 - (void)prepareForReuse {
-    
+    self.imageView.image = nil;
 }
 
 - (void)configureWithMovie:(AVGMovie *)movie {
@@ -48,7 +48,7 @@
     NSURL *imageUrl = [NSURL URLWithString:movie.artworkUrl];
     [self.imageView setImageWithUrl:imageUrl];
     
-    self.favoriteImageView.hidden = !movie.isFavorite;
+    self.favoriteImageView.hidden = !movie.favorite.boolValue;
 }
 
 @end

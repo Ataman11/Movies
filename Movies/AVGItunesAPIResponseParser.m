@@ -8,6 +8,7 @@
 
 #import "AVGItunesAPIResponseParser.h"
 #import "NSObject+AVGTypeChecking.h"
+#import "AVGMoviesDataController.h"
 
 @implementation AVGItunesAPIResponseParser
 
@@ -20,6 +21,8 @@
         }
     }
     
+    [[AVGMoviesDataController sharedInstance].managedObjectContext save:nil];
+    
     return movies;
 }
 
@@ -28,10 +31,19 @@
         return nil;
     }
     
-    AVGMovie *movie = [[AVGMovie alloc] init];
+    NSString *trackId;
+    if ([response[@"trackId"] avg_isNumber]) {
+        trackId = response[@"trackId"];
+    }
+    
+    AVGMovie *movie = [[AVGMoviesDataController sharedInstance] movieWithTrackId:trackId];
+    
+    if (!movie) {
+        movie = [AVGMovie insertNewObjectInManagedObjectContext:[AVGMoviesDataController sharedInstance].managedObjectContext];
+    }
     
     if ([response[@"trackId"] avg_isNumber]) {
-        movie.trackId = [response[@"trackId"] integerValue];
+        movie.trackId = response[@"trackId"];
     }
     
     if ([response[@"artistName"] avg_isNonEmptyString]) {
