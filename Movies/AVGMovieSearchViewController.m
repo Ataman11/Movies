@@ -10,16 +10,19 @@
 #import "AVGItunesAPI.h"
 #import "AVGMovieCollectionViewCell.h"
 #import "AVGMovie.h"
+#import "AVGEmptyStateView.h"
+#import "AVGMovieDetailViewController.h"
 
 static NSString * const kCellIdentifier = @"Cell";
 static CGFloat const kCellHeight = 190.0;
 
 @interface AVGMovieSearchViewController () <UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) UISearchBar *searchBar;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, copy) NSArray *movies;
+@property (nonatomic, weak) AVGEmptyStateView *emptyStateView;
 
 @end
 
@@ -31,6 +34,8 @@ static CGFloat const kCellHeight = 190.0;
     [super viewDidLoad];
     
     [self.collectionView registerClass:[AVGMovieCollectionViewCell class] forCellWithReuseIdentifier:kCellIdentifier];
+    [self setupSearchBar];
+    [self showInitialView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -45,6 +50,18 @@ static CGFloat const kCellHeight = 190.0;
 }
 
 #pragma mark - Helper Methods
+
+- (void)setupSearchBar {
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 44.0)];
+    searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    searchBar.barTintColor = [UIColor whiteColor];
+    searchBar.placeholder = @"Search";
+    searchBar.delegate = self;
+    
+    self.navigationItem.titleView = searchBar;
+    
+    self.searchBar = searchBar;
+}
 
 - (void)scrolToTop {
     if (self.movies.firstObject) {
@@ -71,12 +88,6 @@ static CGFloat const kCellHeight = 190.0;
     [self updateSearchResultsForSearchTerm:searchBar.text];
 }
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-    [searchBar setShowsCancelButton:NO animated:YES];
-    [self.searchBar resignFirstResponder];
-    [self updateSearchResultsForSearchTerm:searchBar.text];
-}
-
 - (void)updateSearchResultsForSearchTerm:(NSString *)searchTerm {
     if (searchTerm.length > 0) {
         [self.activityIndicator startAnimating];
@@ -89,9 +100,56 @@ static CGFloat const kCellHeight = 190.0;
                 [self.collectionView reloadData];
                 [self scrolToTop];
             });
+            
+            if (error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self showGenericErrorAlert];
+                });
+            } else if (!movies.firstObject || !movies) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self showNoResultsView];
+                });
+            } else {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self closeEmptyStateView];
+                });
+            }
         }];
-        
     }
+}
+
+- (void)showInitialView {
+    if (self.emptyStateView) {
+        [self closeEmptyStateView];
+    }
+    
+    AVGEmptyStateView *emptyStateView = [AVGEmptyStateView viewWithTitle:@"Make a Search" message:@"Please enter a search term above\nto search for a movie."];
+    [emptyStateView showInView:self.view];
+    self.emptyStateView = emptyStateView;
+}
+
+- (void)showNoResultsView {
+    if (self.emptyStateView) {
+        [self closeEmptyStateView];
+    }
+    
+    AVGEmptyStateView *emptyStateView = [AVGEmptyStateView viewWithTitle:@"No Results" message:@"Search returned no results.\nPlease try different search."];
+    [emptyStateView showInView:self.view];
+    self.emptyStateView = emptyStateView;
+}
+
+- (void)closeEmptyStateView {
+    [self.emptyStateView close];
+    self.emptyStateView = nil;
+}
+
+- (void)showGenericErrorAlert {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:@"Something went wrong. Please try again later." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -119,6 +177,10 @@ static CGFloat const kCellHeight = 190.0;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    AVGMovie *movie = self.movies[indexPath.row];
+    AVGMovieDetailViewController *detailViewController = [AVGMovieDetailViewController newDetailViewControllerWithMovie:movie];
+    [self.navigationController showViewController:detailViewController sender:self.navigationController];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

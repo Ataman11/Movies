@@ -23,6 +23,10 @@
 		280A80E91BD5ED54003F4120 /* AVGMovieInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E81BD5ED54003F4120 /* AVGMovieInfoView.m */; settings = {ASSET_TAGS = (); }; };
 		280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */; settings = {ASSET_TAGS = (); }; };
 		280A80EE1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80ED1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m */; settings = {ASSET_TAGS = (); }; };
+		280A80F61BD61D5C003F4120 /* AVGEmptyStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80F51BD61D5C003F4120 /* AVGEmptyStateView.m */; settings = {ASSET_TAGS = (); }; };
+		280A80F81BD61D70003F4120 /* AVGEmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80F71BD61D70003F4120 /* AVGEmptyStateView.xib */; settings = {ASSET_TAGS = (); }; };
+		280A80FC1BD69220003F4120 /* AVGMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80FA1BD69220003F4120 /* AVGMovieDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		280A80FD1BD69220003F4120 /* AVGMovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80FB1BD69220003F4120 /* AVGMovieDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,12 @@
 		280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVGMovieInfoView.xib; sourceTree = "<group>"; };
 		280A80EC1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AVGImageLoading.h"; sourceTree = "<group>"; };
 		280A80ED1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AVGImageLoading.m"; sourceTree = "<group>"; };
+		280A80F41BD61D5C003F4120 /* AVGEmptyStateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGEmptyStateView.h; sourceTree = "<group>"; };
+		280A80F51BD61D5C003F4120 /* AVGEmptyStateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGEmptyStateView.m; sourceTree = "<group>"; };
+		280A80F71BD61D70003F4120 /* AVGEmptyStateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVGEmptyStateView.xib; sourceTree = "<group>"; };
+		280A80F91BD69220003F4120 /* AVGMovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieDetailViewController.h; sourceTree = "<group>"; };
+		280A80FA1BD69220003F4120 /* AVGMovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieDetailViewController.m; sourceTree = "<group>"; };
+		280A80FB1BD69220003F4120 /* AVGMovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVGMovieDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,11 +173,15 @@
 			isa = PBXGroup;
 			children = (
 				280A80B41BD5D741003F4120 /* Main.storyboard */,
+				280A80FB1BD69220003F4120 /* AVGMovieDetailViewController.xib */,
 				280A80D61BD5D9A8003F4120 /* AVGMovieCollectionViewCell.h */,
 				280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */,
 				280A80E71BD5ED54003F4120 /* AVGMovieInfoView.h */,
 				280A80E81BD5ED54003F4120 /* AVGMovieInfoView.m */,
 				280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */,
+				280A80F41BD61D5C003F4120 /* AVGEmptyStateView.h */,
+				280A80F51BD61D5C003F4120 /* AVGEmptyStateView.m */,
+				280A80F71BD61D70003F4120 /* AVGEmptyStateView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -177,6 +191,8 @@
 			children = (
 				280A80D01BD5D81D003F4120 /* AVGMovieSearchViewController.h */,
 				280A80D11BD5D81D003F4120 /* AVGMovieSearchViewController.m */,
+				280A80F91BD69220003F4120 /* AVGMovieDetailViewController.h */,
+				280A80FA1BD69220003F4120 /* AVGMovieDetailViewController.m */,
 				280A80D31BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.h */,
 				280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */,
 			);
@@ -274,7 +290,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280A80F81BD61D70003F4120 /* AVGEmptyStateView.xib in Resources */,
 				280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */,
+				280A80FD1BD69220003F4120 /* AVGMovieDetailViewController.xib in Resources */,
 				280A80BB1BD5D741003F4120 /* LaunchScreen.storyboard in Resources */,
 				280A80B81BD5D741003F4120 /* Assets.xcassets in Resources */,
 				280A80B61BD5D741003F4120 /* Main.storyboard in Resources */,
@@ -295,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280A80FC1BD69220003F4120 /* AVGMovieDetailViewController.m in Sources */,
 				280A80D91BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m in Sources */,
 				280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */,
 				280A80AD1BD5D741003F4120 /* AppDelegate.m in Sources */,
@@ -306,6 +325,7 @@
 				280A80E91BD5ED54003F4120 /* AVGMovieInfoView.m in Sources */,
 				280A80AA1BD5D741003F4120 /* main.m in Sources */,
 				280A80EE1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m in Sources */,
+				280A80F61BD61D5C003F4120 /* AVGEmptyStateView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

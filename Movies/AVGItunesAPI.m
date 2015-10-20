@@ -16,7 +16,10 @@
     NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=movie", searchTerm];
     NSURL *url = [NSURL URLWithString:urlString];
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        id result;
+        if (data) {
+            result = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        }
         
         if ([result avg_isNonEmptyDictionary] && [result[@"results"] avg_isNonEmptyArray]) {
             NSArray *movies = [AVGItunesAPIResponseParser moviesFromResponses:result[@"results"]];

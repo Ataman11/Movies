@@ -71,7 +71,7 @@ static CGFloat const kCornerRadius = 3.0;
     [super setHighlighted:highlighted];
     
     if (highlighted) {
-        self.movieInfoView.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.3];
+        self.movieInfoView.backgroundColor = [UIColor lightGrayColor];
     } else {
         self.movieInfoView.backgroundColor = [UIColor whiteColor];
     }
