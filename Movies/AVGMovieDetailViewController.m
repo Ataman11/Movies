@@ -43,7 +43,7 @@ static NSString * const kPlayerCellReuseIdentifier = @"PlayerCell";
     
     [self setuptableView];
     [self updateFavoriteButton];
-    self.title = @"Movie Detail";
+    self.title = NSLocalizedString(@"Movie Detail", @"Movie detail view title");
 }
 
 - (void)setuptableView {
@@ -151,8 +151,8 @@ static NSString * const kPlayerCellReuseIdentifier = @"PlayerCell";
 #pragma mark - AVGMoviePlayerTableViewCellDelegate
 
 - (void)moviePlayerTableViewCellDidFailToPlayMovie:(AVGMoviePlayerTableViewCell *)cell {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oh no" message:@"This movie preview cannot be played." preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Oh no", @"Movie play failed alert title") message:NSLocalizedString(@"This movie preview cannot be played.", @"Movie play failed alert message")  preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"Movie play failed alert button title") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     [alertController addAction:okAction];

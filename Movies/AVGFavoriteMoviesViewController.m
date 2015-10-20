@@ -36,7 +36,7 @@ static CGFloat const kCellHeight = 190.0;
 
     [self setupFetchResultsController];
     
-    self.title = @"Favorites";
+    self.title = NSLocalizedString(@"Favorites", @"Favorites view title");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,9 +48,6 @@ static CGFloat const kCellHeight = 190.0;
     } else {
         [self closeEmptyStateView];
     }
-    
-    [self.fetchedResultsController performFetch:NULL];
-    [self.collectionView reloadData];
 }
 
 #pragma mark - Helper Methods
@@ -60,7 +57,7 @@ static CGFloat const kCellHeight = 190.0;
         [self closeEmptyStateView];
     }
     
-    AVGEmptyStateView *emptyStateView = [AVGEmptyStateView viewWithTitle:@"No Favorites Yet" message:@"To add favorites go to search\nand find movies you like."];
+    AVGEmptyStateView *emptyStateView = [AVGEmptyStateView viewWithTitle:NSLocalizedString(@"No Favorites Yet", @"Empty state view title") message:NSLocalizedString(@"To add favorites go to search\nand find movies you like.", @"Empty state view message")];
     [emptyStateView showInView:self.view];
     self.emptyStateView = emptyStateView;
 }

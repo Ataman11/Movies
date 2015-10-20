@@ -57,7 +57,7 @@ static CGFloat const kCellHeight = 190.0;
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 44.0)];
     searchBar.searchBarStyle = UISearchBarStyleMinimal;
     searchBar.barTintColor = [UIColor whiteColor];
-    searchBar.placeholder = @"Search";
+    searchBar.placeholder = NSLocalizedString(@"Search", @"Search bar placeholder text");
     searchBar.delegate = self;
     
     self.navigationItem.titleView = searchBar;
@@ -82,6 +82,10 @@ static CGFloat const kCellHeight = 190.0;
     searchBar.text = @"";
     [searchBar setShowsCancelButton:NO animated:YES];
     [searchBar resignFirstResponder];
+    
+    self.movies = nil;
+    [self.collectionView reloadData];
+    [self showInitialView];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -125,7 +129,7 @@ static CGFloat const kCellHeight = 190.0;
         [self closeEmptyStateView];
     }
     
-    AVGEmptyStateView *emptyStateView = [AVGEmptyStateView viewWithTitle:@"Make a Search" message:@"Please enter a search term above\nto search for a movie."];
+    AVGEmptyStateView *emptyStateView = [AVGEmptyStateView viewWithTitle:NSLocalizedString(@"Make a Search", @"Search view empty state title") message:NSLocalizedString(@"Please enter a search term above\nto search for a movie.", @"Search view empty state message")];
     [emptyStateView showInView:self.view];
     self.emptyStateView = emptyStateView;
 }
@@ -135,7 +139,7 @@ static CGFloat const kCellHeight = 190.0;
         [self closeEmptyStateView];
     }
     
-    AVGEmptyStateView *emptyStateView = [AVGEmptyStateView viewWithTitle:@"No Results" message:@"Search returned no results.\nPlease try different search."];
+    AVGEmptyStateView *emptyStateView = [AVGEmptyStateView viewWithTitle:NSLocalizedString(@"No Results", @"Search view no results view title") message:NSLocalizedString(@"Search returned no results.\nPlease try different search.", @"Search view no results view message")];
     [emptyStateView showInView:self.view];
     self.emptyStateView = emptyStateView;
 }
@@ -146,8 +150,8 @@ static CGFloat const kCellHeight = 190.0;
 }
 
 - (void)showGenericErrorAlert {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:@"Something went wrong. Please try again later." preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Oops", @"Search view error alert title") message:NSLocalizedString(@"Something went wrong. Please try again later.", @"Search view error alert message") preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"Search view error alert button title") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     [alertController addAction:okAction];

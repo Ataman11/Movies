@@ -33,6 +33,7 @@
 		280A810D1BD6C93E003F4120 /* movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 280A810B1BD6C93E003F4120 /* movies.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		280A81101BD6CD9F003F4120 /* AVGMoviesDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A810F1BD6CD9F003F4120 /* AVGMoviesDataController.m */; settings = {ASSET_TAGS = (); }; };
 		280A81131BD6D01F003F4120 /* AVGMovieManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A81121BD6D01F003F4120 /* AVGMovieManagedObject.m */; settings = {ASSET_TAGS = (); }; };
+		28FA74B71BD6F55D000F2703 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28FA74B51BD6F55D000F2703 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,10 @@
 		280A810F1BD6CD9F003F4120 /* AVGMoviesDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMoviesDataController.m; sourceTree = "<group>"; };
 		280A81111BD6D01F003F4120 /* AVGMovieManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieManagedObject.h; sourceTree = "<group>"; };
 		280A81121BD6D01F003F4120 /* AVGMovieManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieManagedObject.m; sourceTree = "<group>"; };
+		28FA74B21BD6F078000F2703 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		28FA74B31BD6F078000F2703 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		28FA74B61BD6F55D000F2703 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		28FA74B81BD6F564000F2703 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +145,7 @@
 				280A80F31BD61373003F4120 /* API */,
 				280A80F01BD61319003F4120 /* Model */,
 				280A80EF1BD61306003F4120 /* Categories */,
+				28FA74B01BD6EF58000F2703 /* Localizations */,
 				280A80B71BD5D741003F4120 /* Assets.xcassets */,
 				280A80B91BD5D741003F4120 /* LaunchScreen.storyboard */,
 				280A80BC1BD5D741003F4120 /* Info.plist */,
@@ -236,6 +242,14 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		28FA74B01BD6EF58000F2703 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				28FA74B51BD6F55D000F2703 /* Localizable.strings */,
+			);
+			name = Localizations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +313,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 280A809C1BD5D741003F4120;
 			productRefGroup = 280A80A61BD5D741003F4120 /* Products */;
@@ -321,6 +336,7 @@
 				280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */,
 				280A80FD1BD69220003F4120 /* AVGMovieDetailViewController.xib in Resources */,
 				280A80BB1BD5D741003F4120 /* LaunchScreen.storyboard in Resources */,
+				28FA74B71BD6F55D000F2703 /* Localizable.strings in Resources */,
 				280A80B81BD5D741003F4120 /* Assets.xcassets in Resources */,
 				280A80B61BD5D741003F4120 /* Main.storyboard in Resources */,
 			);
@@ -384,6 +400,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				280A80B51BD5D741003F4120 /* Base */,
+				28FA74B21BD6F078000F2703 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -392,8 +409,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				280A80BA1BD5D741003F4120 /* Base */,
+				28FA74B31BD6F078000F2703 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		28FA74B51BD6F55D000F2703 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28FA74B61BD6F55D000F2703 /* en */,
+				28FA74B81BD6F564000F2703 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
