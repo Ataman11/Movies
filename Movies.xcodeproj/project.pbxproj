@@ -16,7 +16,7 @@
 		280A80D21BD5D81D003F4120 /* AVGMovieSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D11BD5D81D003F4120 /* AVGMovieSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		280A80D91BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		280A80DD1BD5DDDF003F4120 /* AVGItuensAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DC1BD5DDDF003F4120 /* AVGItuensAPI.m */; settings = {ASSET_TAGS = (); }; };
+		280A80DD1BD5DDDF003F4120 /* AVGItunesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DC1BD5DDDF003F4120 /* AVGItunesAPI.m */; settings = {ASSET_TAGS = (); }; };
 		280A80E01BD5DF9B003F4120 /* AVGMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DF1BD5DF9B003F4120 /* AVGMovie.m */; settings = {ASSET_TAGS = (); }; };
 		280A80E31BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E21BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m */; settings = {ASSET_TAGS = (); }; };
 		280A80E61BD5E256003F4120 /* NSObject+AVGTypeChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E51BD5E256003F4120 /* NSObject+AVGTypeChecking.m */; settings = {ASSET_TAGS = (); }; };
@@ -53,8 +53,8 @@
 		280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGFavoriteMoviesViewController.m; sourceTree = "<group>"; };
 		280A80D61BD5D9A8003F4120 /* AVGMovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieCollectionViewCell.h; sourceTree = "<group>"; };
 		280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieCollectionViewCell.m; sourceTree = "<group>"; };
-		280A80DB1BD5DDDF003F4120 /* AVGItuensAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGItuensAPI.h; sourceTree = "<group>"; };
-		280A80DC1BD5DDDF003F4120 /* AVGItuensAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGItuensAPI.m; sourceTree = "<group>"; };
+		280A80DB1BD5DDDF003F4120 /* AVGItunesAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGItunesAPI.h; sourceTree = "<group>"; };
+		280A80DC1BD5DDDF003F4120 /* AVGItunesAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGItunesAPI.m; sourceTree = "<group>"; };
 		280A80DE1BD5DF9B003F4120 /* AVGMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovie.h; sourceTree = "<group>"; };
 		280A80DF1BD5DF9B003F4120 /* AVGMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovie.m; sourceTree = "<group>"; };
 		280A80E11BD5DFC4003F4120 /* AVGItunesAPIResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGItunesAPIResponseParser.h; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 		280A80F31BD61373003F4120 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				280A80DB1BD5DDDF003F4120 /* AVGItuensAPI.h */,
-				280A80DC1BD5DDDF003F4120 /* AVGItuensAPI.m */,
+				280A80DB1BD5DDDF003F4120 /* AVGItunesAPI.h */,
+				280A80DC1BD5DDDF003F4120 /* AVGItunesAPI.m */,
 				280A80E11BD5DFC4003F4120 /* AVGItunesAPIResponseParser.h */,
 				280A80E21BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m */,
 			);
@@ -300,7 +300,7 @@
 				280A80AD1BD5D741003F4120 /* AppDelegate.m in Sources */,
 				280A80E31BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m in Sources */,
 				280A80E61BD5E256003F4120 /* NSObject+AVGTypeChecking.m in Sources */,
-				280A80DD1BD5DDDF003F4120 /* AVGItuensAPI.m in Sources */,
+				280A80DD1BD5DDDF003F4120 /* AVGItunesAPI.m in Sources */,
 				280A80D21BD5D81D003F4120 /* AVGMovieSearchViewController.m in Sources */,
 				280A80E01BD5DF9B003F4120 /* AVGMovie.m in Sources */,
 				280A80E91BD5ED54003F4120 /* AVGMovieInfoView.m in Sources */,

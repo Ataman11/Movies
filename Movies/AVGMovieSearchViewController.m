@@ -7,7 +7,7 @@
 //
 
 #import "AVGMovieSearchViewController.h"
-#import "AVGItuensAPI.h"
+#import "AVGItunesAPI.h"
 #import "AVGMovieCollectionViewCell.h"
 #import "AVGMovie.h"
 
@@ -68,20 +68,20 @@ static CGFloat const kCellHeight = 190.0;
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar setShowsCancelButton:NO animated:YES];
     [self.searchBar resignFirstResponder];
-    [self updateSearchResultsForSearchterm:searchBar.text];
+    [self updateSearchResultsForSearchTerm:searchBar.text];
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
     [searchBar setShowsCancelButton:NO animated:YES];
     [self.searchBar resignFirstResponder];
-    [self updateSearchResultsForSearchterm:searchBar.text];
+    [self updateSearchResultsForSearchTerm:searchBar.text];
 }
 
-- (void)updateSearchResultsForSearchterm:(NSString *)searchTerm {
+- (void)updateSearchResultsForSearchTerm:(NSString *)searchTerm {
     if (searchTerm.length > 0) {
         [self.activityIndicator startAnimating];
         self.view.userInteractionEnabled = NO;
-        [AVGItuensAPI getMoviesForSearchTerm:searchTerm completion:^(NSArray *movies, NSError *error) {
+        [AVGItunesAPI getMoviesForSearchTerm:searchTerm completion:^(NSArray *movies, NSError *error) {
             self.movies = movies;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.activityIndicator stopAnimating];
