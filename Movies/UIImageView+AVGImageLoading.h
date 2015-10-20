@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  UIImageView+AVGImageLoading.h
 //  Movies
 //
 //  Created by Matador on 2015-10-19.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface UIImageView (AVGImageLoading)
 
+- (void)setImageWithUrl:(NSURL *)imageUrl;
 
 @end
-

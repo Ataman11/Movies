@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		280A80AA1BD5D741003F4120 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80A91BD5D741003F4120 /* main.m */; };
 		280A80AD1BD5D741003F4120 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80AC1BD5D741003F4120 /* AppDelegate.m */; };
-		280A80B01BD5D741003F4120 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80AF1BD5D741003F4120 /* FirstViewController.m */; };
-		280A80B31BD5D741003F4120 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80B21BD5D741003F4120 /* SecondViewController.m */; };
 		280A80B61BD5D741003F4120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280A80B41BD5D741003F4120 /* Main.storyboard */; };
 		280A80B81BD5D741003F4120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280A80B71BD5D741003F4120 /* Assets.xcassets */; };
 		280A80BB1BD5D741003F4120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280A80B91BD5D741003F4120 /* LaunchScreen.storyboard */; };
 		280A80C61BD5D741003F4120 /* MoviesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80C51BD5D741003F4120 /* MoviesTests.m */; };
+		280A80D21BD5D81D003F4120 /* AVGMovieSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D11BD5D81D003F4120 /* AVGMovieSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */; settings = {ASSET_TAGS = (); }; };
+		280A80D91BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		280A80DD1BD5DDDF003F4120 /* AVGItuensAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DC1BD5DDDF003F4120 /* AVGItuensAPI.m */; settings = {ASSET_TAGS = (); }; };
+		280A80E01BD5DF9B003F4120 /* AVGMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DF1BD5DF9B003F4120 /* AVGMovie.m */; settings = {ASSET_TAGS = (); }; };
+		280A80E31BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E21BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m */; settings = {ASSET_TAGS = (); }; };
+		280A80E61BD5E256003F4120 /* NSObject+AVGTypeChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E51BD5E256003F4120 /* NSObject+AVGTypeChecking.m */; settings = {ASSET_TAGS = (); }; };
+		280A80E91BD5ED54003F4120 /* AVGMovieInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E81BD5ED54003F4120 /* AVGMovieInfoView.m */; settings = {ASSET_TAGS = (); }; };
+		280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */; settings = {ASSET_TAGS = (); }; };
+		280A80EE1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80ED1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +40,6 @@
 		280A80A91BD5D741003F4120 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		280A80AB1BD5D741003F4120 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		280A80AC1BD5D741003F4120 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		280A80AE1BD5D741003F4120 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		280A80AF1BD5D741003F4120 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		280A80B11BD5D741003F4120 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		280A80B21BD5D741003F4120 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		280A80B51BD5D741003F4120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		280A80B71BD5D741003F4120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280A80BA1BD5D741003F4120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +47,25 @@
 		280A80C11BD5D741003F4120 /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		280A80C51BD5D741003F4120 /* MoviesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesTests.m; sourceTree = "<group>"; };
 		280A80C71BD5D741003F4120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280A80D01BD5D81D003F4120 /* AVGMovieSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieSearchViewController.h; sourceTree = "<group>"; };
+		280A80D11BD5D81D003F4120 /* AVGMovieSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieSearchViewController.m; sourceTree = "<group>"; };
+		280A80D31BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGFavoriteMoviesViewController.h; sourceTree = "<group>"; };
+		280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGFavoriteMoviesViewController.m; sourceTree = "<group>"; };
+		280A80D61BD5D9A8003F4120 /* AVGMovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieCollectionViewCell.h; sourceTree = "<group>"; };
+		280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieCollectionViewCell.m; sourceTree = "<group>"; };
+		280A80DB1BD5DDDF003F4120 /* AVGItuensAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGItuensAPI.h; sourceTree = "<group>"; };
+		280A80DC1BD5DDDF003F4120 /* AVGItuensAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGItuensAPI.m; sourceTree = "<group>"; };
+		280A80DE1BD5DF9B003F4120 /* AVGMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovie.h; sourceTree = "<group>"; };
+		280A80DF1BD5DF9B003F4120 /* AVGMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovie.m; sourceTree = "<group>"; };
+		280A80E11BD5DFC4003F4120 /* AVGItunesAPIResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGItunesAPIResponseParser.h; sourceTree = "<group>"; };
+		280A80E21BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGItunesAPIResponseParser.m; sourceTree = "<group>"; };
+		280A80E41BD5E256003F4120 /* NSObject+AVGTypeChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AVGTypeChecking.h"; sourceTree = "<group>"; };
+		280A80E51BD5E256003F4120 /* NSObject+AVGTypeChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AVGTypeChecking.m"; sourceTree = "<group>"; };
+		280A80E71BD5ED54003F4120 /* AVGMovieInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieInfoView.h; sourceTree = "<group>"; };
+		280A80E81BD5ED54003F4120 /* AVGMovieInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieInfoView.m; sourceTree = "<group>"; };
+		280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVGMovieInfoView.xib; sourceTree = "<group>"; };
+		280A80EC1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AVGImageLoading.h"; sourceTree = "<group>"; };
+		280A80ED1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AVGImageLoading.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +109,11 @@
 			children = (
 				280A80AB1BD5D741003F4120 /* AppDelegate.h */,
 				280A80AC1BD5D741003F4120 /* AppDelegate.m */,
-				280A80AE1BD5D741003F4120 /* FirstViewController.h */,
-				280A80AF1BD5D741003F4120 /* FirstViewController.m */,
-				280A80B11BD5D741003F4120 /* SecondViewController.h */,
-				280A80B21BD5D741003F4120 /* SecondViewController.m */,
-				280A80B41BD5D741003F4120 /* Main.storyboard */,
+				280A80F21BD6133E003F4120 /* View Controller */,
+				280A80F11BD6132B003F4120 /* View */,
+				280A80F31BD61373003F4120 /* API */,
+				280A80F01BD61319003F4120 /* Model */,
+				280A80EF1BD61306003F4120 /* Categories */,
 				280A80B71BD5D741003F4120 /* Assets.xcassets */,
 				280A80B91BD5D741003F4120 /* LaunchScreen.storyboard */,
 				280A80BC1BD5D741003F4120 /* Info.plist */,
@@ -114,6 +137,61 @@
 				280A80C71BD5D741003F4120 /* Info.plist */,
 			);
 			path = MoviesTests;
+			sourceTree = "<group>";
+		};
+		280A80EF1BD61306003F4120 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				280A80E41BD5E256003F4120 /* NSObject+AVGTypeChecking.h */,
+				280A80E51BD5E256003F4120 /* NSObject+AVGTypeChecking.m */,
+				280A80EC1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.h */,
+				280A80ED1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		280A80F01BD61319003F4120 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				280A80DE1BD5DF9B003F4120 /* AVGMovie.h */,
+				280A80DF1BD5DF9B003F4120 /* AVGMovie.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		280A80F11BD6132B003F4120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				280A80B41BD5D741003F4120 /* Main.storyboard */,
+				280A80D61BD5D9A8003F4120 /* AVGMovieCollectionViewCell.h */,
+				280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */,
+				280A80E71BD5ED54003F4120 /* AVGMovieInfoView.h */,
+				280A80E81BD5ED54003F4120 /* AVGMovieInfoView.m */,
+				280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		280A80F21BD6133E003F4120 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				280A80D01BD5D81D003F4120 /* AVGMovieSearchViewController.h */,
+				280A80D11BD5D81D003F4120 /* AVGMovieSearchViewController.m */,
+				280A80D31BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.h */,
+				280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		280A80F31BD61373003F4120 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				280A80DB1BD5DDDF003F4120 /* AVGItuensAPI.h */,
+				280A80DC1BD5DDDF003F4120 /* AVGItuensAPI.m */,
+				280A80E11BD5DFC4003F4120 /* AVGItunesAPIResponseParser.h */,
+				280A80E21BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */,
 				280A80BB1BD5D741003F4120 /* LaunchScreen.storyboard in Resources */,
 				280A80B81BD5D741003F4120 /* Assets.xcassets in Resources */,
 				280A80B61BD5D741003F4120 /* Main.storyboard in Resources */,
@@ -216,10 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280A80B31BD5D741003F4120 /* SecondViewController.m in Sources */,
+				280A80D91BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m in Sources */,
+				280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */,
 				280A80AD1BD5D741003F4120 /* AppDelegate.m in Sources */,
-				280A80B01BD5D741003F4120 /* FirstViewController.m in Sources */,
+				280A80E31BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m in Sources */,
+				280A80E61BD5E256003F4120 /* NSObject+AVGTypeChecking.m in Sources */,
+				280A80DD1BD5DDDF003F4120 /* AVGItuensAPI.m in Sources */,
+				280A80D21BD5D81D003F4120 /* AVGMovieSearchViewController.m in Sources */,
+				280A80E01BD5DF9B003F4120 /* AVGMovie.m in Sources */,
+				280A80E91BD5ED54003F4120 /* AVGMovieInfoView.m in Sources */,
 				280A80AA1BD5D741003F4120 /* main.m in Sources */,
+				280A80EE1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -334,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -349,6 +435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = artem.goryaev.Movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -360,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = artem.goryaev.Movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

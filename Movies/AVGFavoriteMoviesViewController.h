@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  AVGFavoriteMoviesViewController.h
 //  Movies
 //
 //  Created by Matador on 2015-10-19.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface AVGFavoriteMoviesViewController : UIViewController
 
 @end
-
