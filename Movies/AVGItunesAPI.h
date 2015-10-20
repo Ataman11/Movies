@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AVGItuensAPI : NSObject
+@interface AVGItunesAPI : NSObject
 
 + (void)getMoviesForSearchTerm:(NSString *)searchTerm completion:(void (^)(NSArray *movies, NSError *error))completion;
 

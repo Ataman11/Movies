@@ -6,11 +6,11 @@
 //  Copyright © 2015 Artem Goryaev. All rights reserved.
 //
 
-#import "AVGItuensAPI.h"
+#import "AVGItunesAPI.h"
 #import "AVGItunesAPIResponseParser.h"
 #import "NSObject+AVGTypeChecking.h"
 
-@implementation AVGItuensAPI
+@implementation AVGItunesAPI
 
 + (void)getMoviesForSearchTerm:(NSString *)searchTerm completion:(void (^)(NSArray *movies, NSError *error))completion {
     NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=movie", searchTerm];
