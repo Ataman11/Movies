@@ -27,6 +27,9 @@
 		280A80F81BD61D70003F4120 /* AVGEmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80F71BD61D70003F4120 /* AVGEmptyStateView.xib */; settings = {ASSET_TAGS = (); }; };
 		280A80FC1BD69220003F4120 /* AVGMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80FA1BD69220003F4120 /* AVGMovieDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		280A80FD1BD69220003F4120 /* AVGMovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80FB1BD69220003F4120 /* AVGMovieDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		280A81001BD698B3003F4120 /* AVGMovieInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80FF1BD698B3003F4120 /* AVGMovieInfoTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		280A81041BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A81021BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		280A81051BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A81031BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,11 @@
 		280A80F91BD69220003F4120 /* AVGMovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieDetailViewController.h; sourceTree = "<group>"; };
 		280A80FA1BD69220003F4120 /* AVGMovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieDetailViewController.m; sourceTree = "<group>"; };
 		280A80FB1BD69220003F4120 /* AVGMovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVGMovieDetailViewController.xib; sourceTree = "<group>"; };
+		280A80FE1BD698B3003F4120 /* AVGMovieInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieInfoTableViewCell.h; sourceTree = "<group>"; };
+		280A80FF1BD698B3003F4120 /* AVGMovieInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieInfoTableViewCell.m; sourceTree = "<group>"; };
+		280A81011BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMoviePlayerTableViewCell.h; sourceTree = "<group>"; };
+		280A81021BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMoviePlayerTableViewCell.m; sourceTree = "<group>"; };
+		280A81031BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVGMoviePlayerTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,11 @@
 				280A80FB1BD69220003F4120 /* AVGMovieDetailViewController.xib */,
 				280A80D61BD5D9A8003F4120 /* AVGMovieCollectionViewCell.h */,
 				280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */,
+				280A80FE1BD698B3003F4120 /* AVGMovieInfoTableViewCell.h */,
+				280A80FF1BD698B3003F4120 /* AVGMovieInfoTableViewCell.m */,
+				280A81011BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.h */,
+				280A81021BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m */,
+				280A81031BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib */,
 				280A80E71BD5ED54003F4120 /* AVGMovieInfoView.h */,
 				280A80E81BD5ED54003F4120 /* AVGMovieInfoView.m */,
 				280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */,
@@ -290,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280A81051BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib in Resources */,
 				280A80F81BD61D70003F4120 /* AVGEmptyStateView.xib in Resources */,
 				280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */,
 				280A80FD1BD69220003F4120 /* AVGMovieDetailViewController.xib in Resources */,
@@ -314,8 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				280A80FC1BD69220003F4120 /* AVGMovieDetailViewController.m in Sources */,
+				280A81001BD698B3003F4120 /* AVGMovieInfoTableViewCell.m in Sources */,
 				280A80D91BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m in Sources */,
 				280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */,
+				280A81041BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m in Sources */,
 				280A80AD1BD5D741003F4120 /* AppDelegate.m in Sources */,
 				280A80E31BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m in Sources */,
 				280A80E61BD5E256003F4120 /* NSObject+AVGTypeChecking.m in Sources */,
@@ -514,6 +530,7 @@
 				280A80CC1BD5D741003F4120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		280A80CD1BD5D741003F4120 /* Build configuration list for PBXNativeTarget "MoviesTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +539,7 @@
 				280A80CF1BD5D741003F4120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

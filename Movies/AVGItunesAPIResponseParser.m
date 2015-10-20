@@ -54,6 +54,10 @@
         movie.releaseDate = [AVGItunesAPIResponseParser dateForString:response[@"releaseDate"]];
     }
     
+    if ([response[@"previewUrl"] avg_isNonEmptyString]) {
+        movie.previewUrl = response[@"previewUrl"];
+    }
+    
     /*"wrapperType": "track",
     "kind": "feature-movie",
     "collectionId": 948979890,

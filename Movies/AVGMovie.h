@@ -16,6 +16,8 @@
 @property (nonatomic, copy) NSString *longDescription;
 @property (nonatomic, copy) NSString *artworkUrl;
 @property (nonatomic, strong) NSDate *releaseDate;
+@property (nonatomic, copy) NSString *previewUrl;
+@property (nonatomic, assign, getter=isFavorite) BOOL favorite;
 
 
 /*"wrapperType": "track",

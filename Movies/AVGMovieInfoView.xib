@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
@@ -17,7 +18,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director, Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHa-VD-H1I">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director, Year" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHa-VD-H1I">
                     <rect key="frame" x="96" y="34" width="216" height="18"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -25,13 +26,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description goes here. Its very long and probabalhy will go about few lines of text. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4j-L8-Ecq">
-                    <rect key="frame" x="8" y="96" width="304" height="115"/>
+                    <rect key="frame" x="8" y="150" width="304" height="61"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tnx-BY-QsY">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tnx-BY-QsY" userLabel="Artwork Image View">
                     <rect key="frame" x="8" y="8" width="80" height="80"/>
                     <animations/>
                     <constraints>
@@ -39,32 +40,47 @@
                         <constraint firstAttribute="width" constant="80" id="dPt-2O-f8N"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like_tab_icon_filled" translatesAutoresizingMaskIntoConstraints="NO" id="92g-lO-Wsi" userLabel="Favorite Image View">
+                    <rect key="frame" x="8" y="8" width="25" height="25"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="wM4-ug-ga1"/>
+                        <constraint firstAttribute="width" constant="25" id="zrp-qc-2OX"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="wo9-H8-6jG" secondAttribute="trailing" constant="8" id="0wc-cW-wP8"/>
-                <constraint firstItem="j4j-L8-Ecq" firstAttribute="top" secondItem="Tnx-BY-QsY" secondAttribute="bottom" constant="8" id="4hG-83-m6t"/>
+                <constraint firstItem="j4j-L8-Ecq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Tnx-BY-QsY" secondAttribute="bottom" constant="8" id="4hG-83-m6t"/>
                 <constraint firstItem="Tnx-BY-QsY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Eba-8i-e08"/>
                 <constraint firstItem="bHa-VD-H1I" firstAttribute="top" secondItem="wo9-H8-6jG" secondAttribute="bottom" constant="5" id="QpR-bL-BNE"/>
                 <constraint firstItem="Tnx-BY-QsY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="ROb-F6-26K"/>
                 <constraint firstAttribute="trailing" secondItem="j4j-L8-Ecq" secondAttribute="trailing" constant="8" id="Up1-tO-czg"/>
                 <constraint firstItem="j4j-L8-Ecq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="exi-Pn-z41"/>
+                <constraint firstItem="92g-lO-Wsi" firstAttribute="top" secondItem="Tnx-BY-QsY" secondAttribute="top" id="fV6-cE-tTe"/>
                 <constraint firstItem="wo9-H8-6jG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="g5M-QO-k1n"/>
                 <constraint firstItem="bHa-VD-H1I" firstAttribute="trailing" secondItem="wo9-H8-6jG" secondAttribute="trailing" id="g9G-qi-CrD"/>
                 <constraint firstItem="wo9-H8-6jG" firstAttribute="leading" secondItem="Tnx-BY-QsY" secondAttribute="trailing" constant="8" id="hx4-io-DUT"/>
                 <constraint firstItem="bHa-VD-H1I" firstAttribute="leading" secondItem="wo9-H8-6jG" secondAttribute="leading" id="qmY-sz-iw7"/>
+                <constraint firstItem="92g-lO-Wsi" firstAttribute="leading" secondItem="Tnx-BY-QsY" secondAttribute="leading" id="sHS-ee-Yxp"/>
                 <constraint firstAttribute="bottom" secondItem="j4j-L8-Ecq" secondAttribute="bottom" constant="9" id="wvZ-7f-sAH"/>
+                <constraint firstItem="j4j-L8-Ecq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bHa-VD-H1I" secondAttribute="bottom" constant="8" id="yd9-tZ-0eh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="descriptionLabel" destination="j4j-L8-Ecq" id="20v-ul-7BN"/>
                 <outlet property="directorLabel" destination="bHa-VD-H1I" id="dMQ-Xh-qTS"/>
+                <outlet property="favoriteImageView" destination="92g-lO-Wsi" id="kgz-K4-08C"/>
                 <outlet property="imageView" destination="Tnx-BY-QsY" id="2kJ-oV-u3o"/>
                 <outlet property="nameLabel" destination="wo9-H8-6jG" id="2So-Qv-UFq"/>
             </connections>
             <point key="canvasLocation" x="488" y="490"/>
         </view>
     </objects>
+    <resources>
+        <image name="like_tab_icon_filled" width="25" height="25"/>
+    </resources>
 </document>

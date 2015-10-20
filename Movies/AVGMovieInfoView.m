@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *directorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *favoriteImageView;
 
 @end
 
@@ -27,6 +28,9 @@
     self.imageView.layer.cornerRadius = floorf(CGRectGetWidth(self.imageView.frame) / 2);
     self.imageView.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
     self.imageView.layer.borderWidth = 0.5;
+    
+    self.favoriteImageView.tintColor = self.tintColor;
+    self.favoriteImageView.image = [[UIImage imageNamed:@"like_tab_icon_filled"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 }
 
 - (void)prepareForReuse {
@@ -43,6 +47,8 @@
     
     NSURL *imageUrl = [NSURL URLWithString:movie.artworkUrl];
     [self.imageView setImageWithUrl:imageUrl];
+    
+    self.favoriteImageView.hidden = !movie.isFavorite;
 }
 
 @end

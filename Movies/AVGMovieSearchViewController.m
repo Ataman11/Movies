@@ -41,6 +41,8 @@ static CGFloat const kCellHeight = 190.0;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
+    [self.collectionView reloadItemsAtIndexPaths:indexPaths];
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
