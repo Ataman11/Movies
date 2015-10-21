@@ -60,6 +60,7 @@ static CGFloat const kCornerRadius = 3.0;
 }
 
 - (void)prepareForReuse {
+    [super prepareForReuse];
     [self.movieInfoView prepareForReuse];
 }
 

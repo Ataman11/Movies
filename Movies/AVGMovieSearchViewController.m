@@ -15,6 +15,8 @@
 
 static NSString * const kCellIdentifier = @"Cell";
 static CGFloat const kCellHeight = 190.0;
+static CGFloat const kHorizontalPadding = 10.0;
+static CGFloat const kVerticalPadding = 5.0;
 
 @interface AVGMovieSearchViewController () <UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -98,26 +100,31 @@ static CGFloat const kCellHeight = 190.0;
     if (searchTerm.length > 0) {
         [self.activityIndicator startAnimating];
         self.view.userInteractionEnabled = NO;
+        __weak typeof(self) weakSelf = self;
         [AVGItunesAPI getMoviesForSearchTerm:searchTerm completion:^(NSArray *movies, NSError *error) {
-            self.movies = movies;
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            if (!strongSelf) {
+                return;
+            }
+            strongSelf.movies = movies;
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.activityIndicator stopAnimating];
-                self.view.userInteractionEnabled = YES;
-                [self.collectionView reloadData];
-                [self scrolToTop];
+                [strongSelf.activityIndicator stopAnimating];
+                strongSelf.view.userInteractionEnabled = YES;
+                [strongSelf.collectionView reloadData];
+                [strongSelf scrolToTop];
             });
             
             if (error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self showGenericErrorAlert];
+                    [strongSelf showGenericErrorAlert];
                 });
             } else if (!movies.firstObject || !movies) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self showNoResultsView];
+                    [strongSelf showNoResultsView];
                 });
             } else {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self closeEmptyStateView];
+                    [strongSelf closeEmptyStateView];
                 });
             }
         }];
@@ -194,16 +201,16 @@ static CGFloat const kCellHeight = 190.0;
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize size;
     if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
-        size = CGSizeMake(CGRectGetWidth(self.collectionView.frame) - 20, kCellHeight);
+        size = CGSizeMake(CGRectGetWidth(self.collectionView.frame) - kHorizontalPadding * 2, kCellHeight);
     } else {
-        size = CGSizeMake(floorf(CGRectGetWidth(self.collectionView.frame) / 2) - 15, kCellHeight);
+        size = CGSizeMake(floorf(CGRectGetWidth(self.collectionView.frame) / 2) - kHorizontalPadding * 3 / 2, kCellHeight);
     }
     
     return size;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(5, 10, 5, 10);
+    return UIEdgeInsetsMake(kVerticalPadding, kHorizontalPadding, kVerticalPadding, kHorizontalPadding);
 }
 
 @end

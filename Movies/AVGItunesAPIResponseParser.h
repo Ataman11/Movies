@@ -12,6 +12,6 @@
 @interface AVGItunesAPIResponseParser : NSObject
 
 + (NSArray *)moviesFromResponses:(NSArray *)responses;
-+ (AVGMovie *)movieFromReponse:(NSDictionary *)response;
++ (AVGMovie *)movieFromResponse:(NSDictionary *)response;
 
 @end

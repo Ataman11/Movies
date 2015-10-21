@@ -64,12 +64,11 @@ static NSString * const kPlayerCellReuseIdentifier = @"PlayerCell";
 
 - (void)favoriteButtonTapped:(id)sender {
     self.movie.favorite = @(!self.movie.favorite.boolValue);
-    //TODO: update core data
     [[AVGMoviesDataController sharedInstance].managedObjectContext save:nil];
     [self updateFavoriteButton];
     
-    NSArray *indexPaths = [self.tableView indexPathsForVisibleRows];
-    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+    AVGMovieInfoTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [cell configureWithMovie:self.movie];
 }
 
 #pragma mark - UITableViewDataSource
@@ -152,8 +151,13 @@ static NSString * const kPlayerCellReuseIdentifier = @"PlayerCell";
 
 - (void)moviePlayerTableViewCellDidFailToPlayMovie:(AVGMoviePlayerTableViewCell *)cell {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Oh no", @"Movie play failed alert title") message:NSLocalizedString(@"This movie preview cannot be played.", @"Movie play failed alert message")  preferredStyle:UIAlertControllerStyleAlert];
+    __weak typeof(self) weakSelf = self;
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"Movie play failed alert button title") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
+        [strongSelf dismissViewControllerAnimated:YES completion:nil];
     }];
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];

@@ -17,9 +17,11 @@
 
 @end
 
+
 @interface AVGMoviePlayerTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) id<AVGMoviePlayerTableViewCellDelegate>delegate;
+
 - (void)configureWithUrl:(NSURL *)movieUrl;
 - (void)configureWithPreviewImageUrl:(NSURL *)previewImageUrl;
 

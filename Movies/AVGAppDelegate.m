@@ -6,13 +6,13 @@
 //  Copyright © 2015 Artem Goryaev. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "AVGAppDelegate.h"
 
-@interface AppDelegate ()
+@interface AVGAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AVGAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

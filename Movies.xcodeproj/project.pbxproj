@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		280A80AA1BD5D741003F4120 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80A91BD5D741003F4120 /* main.m */; };
-		280A80AD1BD5D741003F4120 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80AC1BD5D741003F4120 /* AppDelegate.m */; };
+		280A80AD1BD5D741003F4120 /* AVGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80AC1BD5D741003F4120 /* AVGAppDelegate.m */; };
 		280A80B61BD5D741003F4120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280A80B41BD5D741003F4120 /* Main.storyboard */; };
 		280A80B81BD5D741003F4120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280A80B71BD5D741003F4120 /* Assets.xcassets */; };
-		280A80BB1BD5D741003F4120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280A80B91BD5D741003F4120 /* LaunchScreen.storyboard */; };
 		280A80C61BD5D741003F4120 /* MoviesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80C51BD5D741003F4120 /* MoviesTests.m */; };
 		280A80D21BD5D81D003F4120 /* AVGMovieSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D11BD5D81D003F4120 /* AVGMovieSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -32,7 +31,6 @@
 		280A81051BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A81031BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		280A810D1BD6C93E003F4120 /* movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 280A810B1BD6C93E003F4120 /* movies.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		280A81101BD6CD9F003F4120 /* AVGMoviesDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A810F1BD6CD9F003F4120 /* AVGMoviesDataController.m */; settings = {ASSET_TAGS = (); }; };
-		280A81131BD6D01F003F4120 /* AVGMovieManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A81121BD6D01F003F4120 /* AVGMovieManagedObject.m */; settings = {ASSET_TAGS = (); }; };
 		28FA74B71BD6F55D000F2703 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28FA74B51BD6F55D000F2703 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -49,11 +47,10 @@
 /* Begin PBXFileReference section */
 		280A80A51BD5D741003F4120 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280A80A91BD5D741003F4120 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		280A80AB1BD5D741003F4120 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		280A80AC1BD5D741003F4120 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		280A80AB1BD5D741003F4120 /* AVGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVGAppDelegate.h; sourceTree = "<group>"; };
+		280A80AC1BD5D741003F4120 /* AVGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVGAppDelegate.m; sourceTree = "<group>"; };
 		280A80B51BD5D741003F4120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		280A80B71BD5D741003F4120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		280A80BA1BD5D741003F4120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280A80BC1BD5D741003F4120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280A80C11BD5D741003F4120 /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		280A80C51BD5D741003F4120 /* MoviesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesTests.m; sourceTree = "<group>"; };
@@ -91,10 +88,7 @@
 		280A810C1BD6C93E003F4120 /* movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = movies.xcdatamodel; sourceTree = "<group>"; };
 		280A810E1BD6CD9F003F4120 /* AVGMoviesDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMoviesDataController.h; sourceTree = "<group>"; };
 		280A810F1BD6CD9F003F4120 /* AVGMoviesDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMoviesDataController.m; sourceTree = "<group>"; };
-		280A81111BD6D01F003F4120 /* AVGMovieManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGMovieManagedObject.h; sourceTree = "<group>"; };
-		280A81121BD6D01F003F4120 /* AVGMovieManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGMovieManagedObject.m; sourceTree = "<group>"; };
 		28FA74B21BD6F078000F2703 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
-		28FA74B31BD6F078000F2703 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		28FA74B61BD6F55D000F2703 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		28FA74B81BD6F564000F2703 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,8 +132,8 @@
 		280A80A71BD5D741003F4120 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				280A80AB1BD5D741003F4120 /* AppDelegate.h */,
-				280A80AC1BD5D741003F4120 /* AppDelegate.m */,
+				280A80AB1BD5D741003F4120 /* AVGAppDelegate.h */,
+				280A80AC1BD5D741003F4120 /* AVGAppDelegate.m */,
 				280A80F21BD6133E003F4120 /* View Controller */,
 				280A80F11BD6132B003F4120 /* View */,
 				280A80F31BD61373003F4120 /* API */,
@@ -147,7 +141,6 @@
 				280A80EF1BD61306003F4120 /* Categories */,
 				28FA74B01BD6EF58000F2703 /* Localizations */,
 				280A80B71BD5D741003F4120 /* Assets.xcassets */,
-				280A80B91BD5D741003F4120 /* LaunchScreen.storyboard */,
 				280A80BC1BD5D741003F4120 /* Info.plist */,
 				280A80A81BD5D741003F4120 /* Supporting Files */,
 			);
@@ -190,8 +183,6 @@
 				280A810B1BD6C93E003F4120 /* movies.xcdatamodeld */,
 				280A810E1BD6CD9F003F4120 /* AVGMoviesDataController.h */,
 				280A810F1BD6CD9F003F4120 /* AVGMoviesDataController.m */,
-				280A81111BD6D01F003F4120 /* AVGMovieManagedObject.h */,
-				280A81121BD6D01F003F4120 /* AVGMovieManagedObject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -335,7 +326,6 @@
 				280A80F81BD61D70003F4120 /* AVGEmptyStateView.xib in Resources */,
 				280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */,
 				280A80FD1BD69220003F4120 /* AVGMovieDetailViewController.xib in Resources */,
-				280A80BB1BD5D741003F4120 /* LaunchScreen.storyboard in Resources */,
 				28FA74B71BD6F55D000F2703 /* Localizable.strings in Resources */,
 				280A80B81BD5D741003F4120 /* Assets.xcassets in Resources */,
 				280A80B61BD5D741003F4120 /* Main.storyboard in Resources */,
@@ -362,7 +352,7 @@
 				280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */,
 				280A81041BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m in Sources */,
 				280A81101BD6CD9F003F4120 /* AVGMoviesDataController.m in Sources */,
-				280A80AD1BD5D741003F4120 /* AppDelegate.m in Sources */,
+				280A80AD1BD5D741003F4120 /* AVGAppDelegate.m in Sources */,
 				280A80E31BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m in Sources */,
 				280A80E61BD5E256003F4120 /* NSObject+AVGTypeChecking.m in Sources */,
 				280A80DD1BD5DDDF003F4120 /* AVGItunesAPI.m in Sources */,
@@ -370,7 +360,6 @@
 				280A80E01BD5DF9B003F4120 /* AVGMovie.m in Sources */,
 				280A80E91BD5ED54003F4120 /* AVGMovieInfoView.m in Sources */,
 				280A80AA1BD5D741003F4120 /* main.m in Sources */,
-				280A81131BD6D01F003F4120 /* AVGMovieManagedObject.m in Sources */,
 				280A80EE1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m in Sources */,
 				280A810D1BD6C93E003F4120 /* movies.xcdatamodeld in Sources */,
 				280A80F61BD61D5C003F4120 /* AVGEmptyStateView.m in Sources */,
@@ -403,15 +392,6 @@
 				28FA74B21BD6F078000F2703 /* fr */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		280A80B91BD5D741003F4120 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				280A80BA1BD5D741003F4120 /* Base */,
-				28FA74B31BD6F078000F2703 /* fr */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		28FA74B51BD6F55D000F2703 /* Localizable.strings */ = {

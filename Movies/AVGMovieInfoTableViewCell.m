@@ -64,6 +64,7 @@
 }
 
 - (void)prepareForReuse {
+    [super prepareForReuse];
     [self.movieInfoView prepareForReuse];
 }
 

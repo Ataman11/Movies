@@ -17,10 +17,8 @@
 
 @implementation AVGEmptyStateView
 
-+ (instancetype)newInstance {
-    AVGEmptyStateView *emptyStateView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([AVGEmptyStateView class]) owner:nil options:nil] firstObject];
-    return emptyStateView;
-}
+
+#pragma mark - Public Methods
 
 + (instancetype)viewWithTitle:(NSString *)title message:(NSString *)message {
     AVGEmptyStateView *emptyStateView = [AVGEmptyStateView newInstance];
@@ -40,20 +38,27 @@
     } completion:nil];
 }
 
-- (void)addLayoutConstraintsInView:(UIView *)view {
-    self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSDictionary *views = @{ @"view" : view,
-                             @"emptyStateView" : self };
-    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[emptyStateView]|" options:0 metrics:nil views:views]];
-    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[emptyStateView]|" options:0 metrics:nil views:views]];
-}
-
 - (void)close {
     [UIView animateWithDuration:0.3 animations:^{
         self.alpha = 0.0;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
+}
+
+#pragma mark - Helper Methods
+
++ (instancetype)newInstance {
+    AVGEmptyStateView *emptyStateView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([AVGEmptyStateView class]) owner:nil options:nil] firstObject];
+    return emptyStateView;
+}
+
+- (void)addLayoutConstraintsInView:(UIView *)view {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *views = @{ @"view" : view,
+                             @"emptyStateView" : self };
+    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[emptyStateView]|" options:0 metrics:nil views:views]];
+    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[emptyStateView]|" options:0 metrics:nil views:views]];
 }
 
 @end

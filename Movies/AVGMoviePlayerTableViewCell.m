@@ -27,7 +27,6 @@
     self.playImageView.image = [[UIImage imageNamed:@"play_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.contentView.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
     self.contentView.layer.borderWidth = 0.5;
-    //self.playImageView.layer.cornerRadius = floorf(CGRectGetWidth(self.playImageView.frame) / 2);
 }
 
 - (void)prepareForReuse {

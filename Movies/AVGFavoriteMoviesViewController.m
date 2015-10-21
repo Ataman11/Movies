@@ -14,6 +14,9 @@
 
 static NSString * const kCellIdentifier = @"Cell";
 static CGFloat const kCellHeight = 190.0;
+static CGFloat const kHorizontalPadding = 10.0;
+static CGFloat const kVerticalPadding = 5.0;
+
 
 @interface AVGFavoriteMoviesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate>
 
@@ -68,12 +71,10 @@ static CGFloat const kCellHeight = 190.0;
 }
 
 - (void)setupFetchResultsController {
-    // Initialize Fetch Request
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[AVGMovie entityName]];
     fetchRequest.predicate = [NSPredicate predicateWithFormat:@"favorite = %@", @(YES)];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"trackName" ascending:YES]];
 
-    // Initialize Fetched Results Controller
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[AVGMoviesDataController sharedInstance].managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
     self.fetchedResultsController.delegate = self;
@@ -82,8 +83,7 @@ static CGFloat const kCellHeight = 190.0;
     [self.fetchedResultsController performFetch:&error];
     
     if (error) {
-        NSLog(@"Unable to perform fetch.");
-        NSLog(@"%@, %@", error, error.localizedDescription);
+        //TODO: handle error
     }
 }
 
@@ -130,16 +130,16 @@ static CGFloat const kCellHeight = 190.0;
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize size;
     if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
-        size = CGSizeMake(CGRectGetWidth(self.collectionView.frame) - 20, kCellHeight);
+        size = CGSizeMake(CGRectGetWidth(self.collectionView.frame) - kHorizontalPadding * 2, kCellHeight);
     } else {
-        size = CGSizeMake(floorf(CGRectGetWidth(self.collectionView.frame) / 2) - 15, kCellHeight);
+        size = CGSizeMake(floorf(CGRectGetWidth(self.collectionView.frame) / 2) - kHorizontalPadding * 3 / 2, kCellHeight);
     }
     
     return size;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(5, 10, 5, 10);
+    return UIEdgeInsetsMake(kVerticalPadding, kHorizontalPadding, kVerticalPadding, kHorizontalPadding);
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate

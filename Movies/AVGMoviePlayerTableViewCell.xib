@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -18,6 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
                         <animations/>
                     </imageView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-BT-MOc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nrN-Mm-aYg">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <animations/>
+                        </view>
+                        <animations/>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-kr-D1x">
                         <rect key="frame" x="145" y="51" width="30" height="30"/>
                         <animations/>
@@ -30,12 +41,16 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="9SD-5N-RdO" secondAttribute="trailing" id="364-uY-Jga"/>
-                    <constraint firstAttribute="bottom" secondItem="9SD-5N-RdO" secondAttribute="bottom" id="J5V-Fj-H1p"/>
+                    <constraint firstAttribute="bottom" secondItem="DYj-BT-MOc" secondAttribute="bottom" id="60s-KH-huA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9SD-5N-RdO" secondAttribute="bottom" constant="-8" id="Bph-FP-A3S"/>
                     <constraint firstItem="Ld9-kr-D1x" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="R5N-jQ-1dk"/>
-                    <constraint firstItem="9SD-5N-RdO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gsE-gT-Rna"/>
+                    <constraint firstAttribute="trailing" secondItem="DYj-BT-MOc" secondAttribute="trailing" id="WSA-6m-Ci1"/>
+                    <constraint firstItem="9SD-5N-RdO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="d7X-Cz-bg1"/>
+                    <constraint firstItem="DYj-BT-MOc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hUh-EY-XJf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9SD-5N-RdO" secondAttribute="trailing" constant="-8" id="kSP-Uj-x8M"/>
+                    <constraint firstItem="DYj-BT-MOc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kUQ-f8-TEn"/>
+                    <constraint firstItem="9SD-5N-RdO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="obC-Kn-g6b"/>
                     <constraint firstItem="Ld9-kr-D1x" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="psW-pC-0aw"/>
-                    <constraint firstItem="9SD-5N-RdO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rd4-dr-eEn"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

@@ -12,9 +12,9 @@
 
 @interface AVGMoviesDataController : NSObject
 
-+ (instancetype)sharedInstance;
 @property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
 
-- (AVGMovie *)movieWithTrackId:(NSString *)trackId;
++ (instancetype)sharedInstance;
+- (AVGMovie *)movieWithTrackId:(NSNumber *)trackId;
 
 @end
