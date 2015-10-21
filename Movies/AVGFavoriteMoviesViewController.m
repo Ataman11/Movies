@@ -53,6 +53,12 @@ static CGFloat const kVerticalPadding = 5.0;
     }
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+        [self.collectionView.collectionViewLayout invalidateLayout];
+    } completion:nil];
+}
+
 #pragma mark - Helper Methods
 
 - (void)showEmptyStateView {
