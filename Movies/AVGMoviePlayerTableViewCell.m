@@ -51,10 +51,10 @@
 }
 
 - (void)configureWithUrl:(NSURL *)movieUrl {
-    [self.moviePlayer.view removeFromSuperview];
-    self.moviePlayer = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerReadyForDisplayDidChangeNotification object:self.moviePlayer];
+    [self.moviePlayer.view removeFromSuperview];
+    self.moviePlayer = nil;
     
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieUrl];
     

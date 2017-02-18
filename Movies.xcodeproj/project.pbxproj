@@ -12,26 +12,26 @@
 		280A80B61BD5D741003F4120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280A80B41BD5D741003F4120 /* Main.storyboard */; };
 		280A80B81BD5D741003F4120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280A80B71BD5D741003F4120 /* Assets.xcassets */; };
 		280A80C61BD5D741003F4120 /* MoviesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80C51BD5D741003F4120 /* MoviesTests.m */; };
-		280A80D21BD5D81D003F4120 /* AVGMovieSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D11BD5D81D003F4120 /* AVGMovieSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
-		280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */; settings = {ASSET_TAGS = (); }; };
-		280A80D91BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		280A80DD1BD5DDDF003F4120 /* AVGItunesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DC1BD5DDDF003F4120 /* AVGItunesAPI.m */; settings = {ASSET_TAGS = (); }; };
-		280A80E01BD5DF9B003F4120 /* AVGMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DF1BD5DF9B003F4120 /* AVGMovie.m */; settings = {ASSET_TAGS = (); }; };
-		280A80E31BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E21BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m */; settings = {ASSET_TAGS = (); }; };
-		280A80E61BD5E256003F4120 /* NSObject+AVGTypeChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E51BD5E256003F4120 /* NSObject+AVGTypeChecking.m */; settings = {ASSET_TAGS = (); }; };
-		280A80E91BD5ED54003F4120 /* AVGMovieInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E81BD5ED54003F4120 /* AVGMovieInfoView.m */; settings = {ASSET_TAGS = (); }; };
-		280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */; settings = {ASSET_TAGS = (); }; };
-		280A80EE1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80ED1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m */; settings = {ASSET_TAGS = (); }; };
-		280A80F61BD61D5C003F4120 /* AVGEmptyStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80F51BD61D5C003F4120 /* AVGEmptyStateView.m */; settings = {ASSET_TAGS = (); }; };
-		280A80F81BD61D70003F4120 /* AVGEmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80F71BD61D70003F4120 /* AVGEmptyStateView.xib */; settings = {ASSET_TAGS = (); }; };
-		280A80FC1BD69220003F4120 /* AVGMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80FA1BD69220003F4120 /* AVGMovieDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		280A80FD1BD69220003F4120 /* AVGMovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80FB1BD69220003F4120 /* AVGMovieDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		280A81001BD698B3003F4120 /* AVGMovieInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80FF1BD698B3003F4120 /* AVGMovieInfoTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		280A81041BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A81021BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		280A81051BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A81031BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		280A810D1BD6C93E003F4120 /* movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 280A810B1BD6C93E003F4120 /* movies.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		280A81101BD6CD9F003F4120 /* AVGMoviesDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A810F1BD6CD9F003F4120 /* AVGMoviesDataController.m */; settings = {ASSET_TAGS = (); }; };
-		28FA74B71BD6F55D000F2703 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28FA74B51BD6F55D000F2703 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
+		280A80D21BD5D81D003F4120 /* AVGMovieSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D11BD5D81D003F4120 /* AVGMovieSearchViewController.m */; };
+		280A80D51BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D41BD5D8E6003F4120 /* AVGFavoriteMoviesViewController.m */; };
+		280A80D91BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80D71BD5D9A8003F4120 /* AVGMovieCollectionViewCell.m */; };
+		280A80DD1BD5DDDF003F4120 /* AVGItunesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DC1BD5DDDF003F4120 /* AVGItunesAPI.m */; };
+		280A80E01BD5DF9B003F4120 /* AVGMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80DF1BD5DF9B003F4120 /* AVGMovie.m */; };
+		280A80E31BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E21BD5DFC4003F4120 /* AVGItunesAPIResponseParser.m */; };
+		280A80E61BD5E256003F4120 /* NSObject+AVGTypeChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E51BD5E256003F4120 /* NSObject+AVGTypeChecking.m */; };
+		280A80E91BD5ED54003F4120 /* AVGMovieInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80E81BD5ED54003F4120 /* AVGMovieInfoView.m */; };
+		280A80EB1BD5ED6D003F4120 /* AVGMovieInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80EA1BD5ED6C003F4120 /* AVGMovieInfoView.xib */; };
+		280A80EE1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80ED1BD5F2C0003F4120 /* UIImageView+AVGImageLoading.m */; };
+		280A80F61BD61D5C003F4120 /* AVGEmptyStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80F51BD61D5C003F4120 /* AVGEmptyStateView.m */; };
+		280A80F81BD61D70003F4120 /* AVGEmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80F71BD61D70003F4120 /* AVGEmptyStateView.xib */; };
+		280A80FC1BD69220003F4120 /* AVGMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80FA1BD69220003F4120 /* AVGMovieDetailViewController.m */; };
+		280A80FD1BD69220003F4120 /* AVGMovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A80FB1BD69220003F4120 /* AVGMovieDetailViewController.xib */; };
+		280A81001BD698B3003F4120 /* AVGMovieInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A80FF1BD698B3003F4120 /* AVGMovieInfoTableViewCell.m */; };
+		280A81041BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A81021BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.m */; };
+		280A81051BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280A81031BD69EE0003F4120 /* AVGMoviePlayerTableViewCell.xib */; };
+		280A810D1BD6C93E003F4120 /* movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 280A810B1BD6C93E003F4120 /* movies.xcdatamodeld */; };
+		280A81101BD6CD9F003F4120 /* AVGMoviesDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280A810F1BD6CD9F003F4120 /* AVGMoviesDataController.m */; };
+		28FA74B71BD6F55D000F2703 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28FA74B51BD6F55D000F2703 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +290,7 @@
 				TargetAttributes = {
 					280A80A41BD5D741003F4120 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = B2T72YBCCD;
 					};
 					280A80C01BD5D741003F4120 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -490,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B2T72YBCCD;
 				INFOPLIST_FILE = Movies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = artem.goryaev.Movies;
@@ -502,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B2T72YBCCD;
 				INFOPLIST_FILE = Movies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = artem.goryaev.Movies;
